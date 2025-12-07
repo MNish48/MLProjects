@@ -1,0 +1,2 @@
+# this file data_transformation.py will have all the code related to data transformation process like scaling, encoding etc.
+# all the code related to data transformation will be written inside this file

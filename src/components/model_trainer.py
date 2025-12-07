@@ -1,0 +1,2 @@
+# here in model_trainer.py we will write all the code related to model training process like training different models, hyperparameter tuning, model evaluation etc.
+# all the code related to model training will be written inside this file
