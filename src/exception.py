@@ -5,6 +5,8 @@
 
 import sys
 import logging
+from src.logger import logging # importing the logging module from logger.py file for logging the exceptions
+
 def error_message_detail(error, error_detail:sys):
     """this function will return the detailed error message with file name and line number where the exception occurred"""
     _,_,exc_tb = error_detail.exc_info() # this talks about the exception details like type, value and traceback
@@ -31,3 +33,9 @@ class CustomException(Exception):
         """this function will return the string representation of the CustomException class"""
         return self.error_message # returning the error message when the exception is printed
     
+if __name__ == "__main__":
+    try:
+        a = 1 / 0 # this will raise a ZeroDivisionError
+    except Exception as e:
+        logging.info("Dividing by zero error occurred.")
+        raise CustomException(e, sys) # raising the custom exception with the original exception and sys module
